@@ -4,7 +4,7 @@ package com.bilalqwatly.kroma.utils
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bilalqwatly.kroma.presentation.ui.adpter.BaseListAdapter
+import com.bilalqwatly.kroma.presentation.ui.base.adpter.BaseListAdapter
 import com.bumptech.glide.Glide
 import java.io.Serializable
 

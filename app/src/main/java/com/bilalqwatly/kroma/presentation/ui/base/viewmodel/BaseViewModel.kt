@@ -1,9 +1,9 @@
-package com.bilalqwatly.kroma.presentation.ui.viewmodel
+package com.bilalqwatly.kroma.presentation.ui.base.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.bilalqwatly.basekotlin.utils.lifecycle.Event
+import com.bilalqwatly.kroma.utils.lifecycle.Event
 import com.bilalqwatly.kroma.data.local.SharedPreferencesManager
 import com.bilalqwatly.kroma.presentation.exception.ExceptionFactory
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -38,8 +38,6 @@ open class BaseViewModel @Inject constructor(
     var toastMessage: LiveData<Event<String?>> = _toastMessage
     private val _toastMessageResource = MutableLiveData<Event<Int>>()
     var toastMessageResource: LiveData<Event<Int>> = _toastMessageResource
-    private val _hideKeyboard = MutableLiveData<Event<Boolean>>()
-    var hideKeyboard: LiveData<Event<Boolean>> = _hideKeyboard
 
     var toolbarTitle = MutableLiveData("")
 
@@ -65,9 +63,7 @@ open class BaseViewModel @Inject constructor(
         stopLoading()
     }
 
-    protected fun hideKeyboard() {
-        _hideKeyboard.postValue(Event(true))
-    }
+
 
     protected fun startLoading(loading: Boolean, loadingRefresh: Boolean, loadingPage: Boolean) {
 

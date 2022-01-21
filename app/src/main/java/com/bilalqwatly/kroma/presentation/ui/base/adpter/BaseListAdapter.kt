@@ -1,4 +1,4 @@
-package com.bilalqwatly.kroma.presentation.ui.adpter
+package com.bilalqwatly.kroma.presentation.ui.base.adpter
 
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView

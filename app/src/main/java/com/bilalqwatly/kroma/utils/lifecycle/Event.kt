@@ -1,4 +1,4 @@
-package com.bilalqwatly.basekotlin.utils.lifecycle
+package com.bilalqwatly.kroma.utils.lifecycle
 
 /**
  * Data Wrapper that can be handled only once

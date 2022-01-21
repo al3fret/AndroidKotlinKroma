@@ -1,4 +1,4 @@
-package com.bilalqwatly.kroma.presentation.ui.view.activity
+package com.bilalqwatly.kroma.presentation.ui.base.view.activity
 
 import android.content.Context
 import android.os.Build
@@ -9,8 +9,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bilalqwatly.kroma.R
-import com.bilalqwatly.kroma.presentation.ui.IBaseView
-import com.bilalqwatly.kroma.presentation.ui.adpter.BaseListAdapter
+import com.bilalqwatly.kroma.presentation.ui.base.IBaseView
+import com.bilalqwatly.kroma.presentation.ui.base.adpter.BaseListAdapter
 
 
 abstract class BaseActivity : AppCompatActivity(), IBaseView {
@@ -41,6 +41,7 @@ abstract class BaseActivity : AppCompatActivity(), IBaseView {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             window.statusBarColor =
                 ContextCompat.getColor(this, R.color.color_FFFFFF)
+
         }
     }
 

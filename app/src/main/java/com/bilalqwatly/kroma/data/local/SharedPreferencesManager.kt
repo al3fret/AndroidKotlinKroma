@@ -24,7 +24,7 @@ class SharedPreferencesManager @Inject constructor(@param:ApplicationContext
 
     companion object {
         // Shared preferences file name
-        private const val PREF_NAME = "com.bilalqwatly.baseKotlin.pref_name"
+        private const val PREF_NAME = "com.bilalqwatly.kroma.pref_name"
 
 
         fun clearPreferences(context: Context) {

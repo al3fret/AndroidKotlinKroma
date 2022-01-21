@@ -7,12 +7,14 @@
         <item name="colorOnPrimary">@color/color_FFFFFF</item>
         <item name="colorControlHighlight">@color/color_CDCDCD_20</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">@color/color_070014</item>
-        <item name="android:navigationBarColor">@color/color_070014</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/color_FFFFFF</item>
+        <item name="android:navigationBarColor">@color/color_FFFFFF</item>
         <!-- Customize your theme here. -->
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="windowActionBar">false</item>
-        <item name="android:windowBackground">@color/color_070014_72</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <item name="android:windowBackground">@color/color_FFFFFF</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:autofilledHighlight" tools:targetApi="o">@android:color/transparent

@@ -2,10 +2,10 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-
-    <item android:drawable="@drawable/bilal_logo"
-        android:width="@dimen/_240sdp"
-        android:height="@dimen/_240sdp"
+<item android:drawable="@color/color_FFFFFF"/>
+    <item android:drawable="@drawable/kroma"
+        android:width="@dimen/_300sdp"
+        android:height="@dimen/_150sdp"
         android:gravity="center"/>
 
 </layer-list>

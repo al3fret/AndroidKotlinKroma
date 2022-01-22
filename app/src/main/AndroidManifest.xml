@@ -18,9 +18,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name="com.bilalqwatly.kroma.presentation.ui.splash.SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:exported="true" >
+            android:name=".presentation.ui.details.DetailsActivity"
+            android:screenOrientation="fullSensor"
+
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="fullSensor"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,12 +35,8 @@
         </activity>
         <activity
             android:name=".presentation.ui.main.MainActivity"
-            android:exported="false">
-
-        </activity>
-
-
-
+            android:screenOrientation="fullSensor"
+            android:exported="false" />
     </application>
 
 </manifest>

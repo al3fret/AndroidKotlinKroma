@@ -10,7 +10,7 @@ import com.bilalqwatly.kroma.R
 import com.bilalqwatly.kroma.presentation.ui.base.viewmodel.BaseViewModel
 
 abstract class MVVMActivity<VM : BaseViewModel, DB : ViewDataBinding> : BaseActivity() {
-    private lateinit var activityBinding: DB
+    lateinit var activityBinding: DB
     protected lateinit var viewModel: VM
     protected abstract fun provideViewModel(): VM
     protected abstract val viewModelId: Int

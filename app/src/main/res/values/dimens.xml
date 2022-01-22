@@ -17,6 +17,7 @@
     <dimen name="font_10">@dimen/_7ssp</dimen>
     <dimen name="font_12">@dimen/_8ssp</dimen>
     <dimen name="font_14">@dimen/_10ssp</dimen>
+    <dimen name="font_13">@dimen/_9ssp</dimen>
     <dimen name="font_16">@dimen/_11ssp</dimen>
     <dimen name="font_18">@dimen/_13ssp</dimen>
     <dimen name="font_20">@dimen/_14ssp</dimen>

@@ -40,7 +40,7 @@ abstract class BaseActivity : AppCompatActivity(), IBaseView {
         super.onPostCreate(savedInstanceState)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             window.statusBarColor =
-                ContextCompat.getColor(this, R.color.color_FFFFFF)
+                ContextCompat.getColor(this, R.color.color_grayF0F0F0)
 
         }
     }

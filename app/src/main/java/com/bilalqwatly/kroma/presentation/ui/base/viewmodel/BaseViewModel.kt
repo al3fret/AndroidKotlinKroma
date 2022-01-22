@@ -20,7 +20,7 @@ open class BaseViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val viewModelJob = SupervisorJob()
-    private val viewModelScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+    val viewModelScope = CoroutineScope(Dispatchers.Main + viewModelJob)
 
 
     override fun onCleared() {
@@ -28,10 +28,10 @@ open class BaseViewModel @Inject constructor(
         viewModelScope.coroutineContext.cancelChildren()
     }
 
+    var isBack = MutableLiveData(false)
+    var goBackClick = MutableLiveData(false)
     var isLoading = MutableLiveData(false)
-    var isLoadingPage = MutableLiveData(false)
     var isError = MutableLiveData(false)
-    var isFirstLoading = MutableLiveData(false)
     var isLoadingRefresh = MutableLiveData(false)
     var errorMessage = MutableLiveData("")
     private val _toastMessage = MutableLiveData<Event<String?>>()
@@ -68,23 +68,17 @@ open class BaseViewModel @Inject constructor(
     protected fun startLoading(loading: Boolean, loadingRefresh: Boolean, loadingPage: Boolean) {
 
         isError.postValue(false)
-        isFirstLoading.postValue(loading)
         isLoading.postValue(loading)
         isLoadingRefresh.postValue(loadingRefresh)
-        isLoadingPage.postValue(loadingPage)
     }
 
-    protected fun startLoadingPage() {
-        isLoadingPage.postValue(true)
-    }
+
 
 
     protected fun stopLoading() {
 
         isLoading.postValue(false)
-        isLoadingPage.postValue(false)
         isLoadingRefresh.postValue(false)
-        isFirstLoading.postValue(false)
     }
 
 
@@ -92,7 +86,7 @@ open class BaseViewModel @Inject constructor(
         toolbarTitle.postValue(title)
     }
 
-    fun fetchFirstData() {
+   open fun fetchFirstData() {
         loadData(loading = true, loadingRefresh = false, loadingPage = false)
     }
 
@@ -110,12 +104,12 @@ open class BaseViewModel @Inject constructor(
 
     private fun loadData(loading: Boolean, loadingRefresh: Boolean, loadingPage: Boolean) {
         if (isLoading.value!! ||
-            isLoadingRefresh.value!! ||
-            isLoadingPage.value!!
-        ) return
+            isLoadingRefresh.value!! ) return
         fetchData(loading, loadingRefresh, loadingPage)
     }
 
+
+     fun goBack() = goBackClick.postValue(true)
 
 
 

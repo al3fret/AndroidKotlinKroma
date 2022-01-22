@@ -1,20 +1,20 @@
 package com.bilalqwatly.kroma.data.remote.api
 
 
-import retrofit2.Call
+import com.bilalqwatly.kroma.data.remote.api.ApiEndPoints.MAIN_URL
+import com.bilalqwatly.kroma.data.remote.api.model.response.BaseResponseData
+import com.bilalqwatly.kroma.data.remote.api.model.response.ResultData
 import retrofit2.http.*
-import java.util.ArrayList
 
 interface RetrofitService {
 
-//
-//
-//    @GET("$RAIL/{id}")
-//    suspend fun getRailById(
-//        @Path(value = "id", encoded = true) id: Int,
-//        @Query(value = "page") page: Int,
-//        @Query(value = "limit") limit: Int
-//    ): BaseResponseData<PagingData.Page<MediaModel>>
+
+    @GET("$MAIN_URL{all-sections}/{period}.json")
+    suspend fun getMain(
+        @Path(value = "all-sections", encoded = true) all_sections: String,
+        @Path(value = "period", encoded = true) period: Int,
+        @Query(value = "api-key") api_key: String,
+    ): BaseResponseData<ArrayList<ResultData>>
 
 
 }

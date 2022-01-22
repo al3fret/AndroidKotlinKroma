@@ -2,7 +2,7 @@ package com.bilalqwatly.kroma.data.remote.api.model.response
 
 import com.google.gson.annotations.SerializedName
 
-open class BaseResponseData {
+open class BaseResponseData<T> {
 
     @SerializedName("status")
     var status: String? = null
@@ -17,7 +17,7 @@ open class BaseResponseData {
         private set
 
     @SerializedName("results")
-    lateinit var results: ArrayList<ResultData>
+    var results: T? = null
         private set
 
 }

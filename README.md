@@ -1,6 +1,6 @@
 # AndroidKotlinKroma
 
-Firstly, thanks for giving me this opportunity
+
 Platform: Android.
 Programming language: Kotlin.
 Structure code: Mvvm.
